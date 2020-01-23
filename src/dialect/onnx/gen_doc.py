@@ -413,7 +413,7 @@ def gen_attr_ins(schema, isfirst) :
     
     def get_attr_type_basic(attr_type) :
         if attr_type == 'int' :
-            mytype = 'I32Attr'
+            mytype = 'I64Attr'
         elif attr_type == 'float' :
             mytype = 'F32Attr'
         elif attr_type == 'ints' :
