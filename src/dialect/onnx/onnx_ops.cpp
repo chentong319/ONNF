@@ -419,8 +419,10 @@ void ONNXTransposeOp::inferShapes() {
   auto arrayTy = getOperand().getType().cast<RankedTensorType>();
   SmallVector<int64_t, 2> dims;
 
-  if (auto permutation = getAttrOfType<ArrayAttr>(
-          ONNXTransposeOp::getPermAttrName())) {
+  //if (auto permutation = getAttrOfType<ArrayAttr>(
+   //       ONNXTransposeOp::getPermAttrName())) {
+  auto permutation = ONNXTransposeOp::permAttr();
+  if (permutation) {
     // Perform transposition according to perm attribute.
     for (auto perm : permutation.getValue())
       dims.emplace_back(arrayTy.getShape()[perm.cast<IntegerAttr>().getInt()]);
