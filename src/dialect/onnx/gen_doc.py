@@ -274,7 +274,7 @@ def gen_schema(schema) :
                     '    static StringRef getPermAttrName() { return "perm"; }\n'+
                     '    }];\n')
       ])
-    skip_attr_gen = ['Gemm']
+    skip_attr_gen = []
     line_indent = '  '
 
     #s = 'def ONNX'+schema.name+str(schema.since_version)+'Op:ONNX_Op<"'+schema.name+'", \n'
@@ -650,6 +650,6 @@ if __name__ == '__main__':
     class Args(object):
         output = os.path.join(docs_dir, 'Operators' + ext)
         changelog = os.path.join(docs_dir, 'Changelog' + ext)
-        tdfile = os.path.join(docs_dir, 'onnxop.inc')
+        tdfile = os.path.join(base_dir, 'onnxop.inc')
     print(Args)
     main(Args)

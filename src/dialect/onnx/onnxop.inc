@@ -1022,7 +1022,11 @@ def ONNXGemmOp:ONNX_Op<"Gemm",
   }];
   let arguments = (ins AnyTypeOf<[AnyMemRef, AnyTensor]>:$A,
            AnyTypeOf<[AnyMemRef, AnyTensor]>:$B,
-           AnyTypeOf<[AnyMemRef, AnyTensor]>:$C);
+           AnyTypeOf<[AnyMemRef, AnyTensor]>:$C,
+           DefaultValuedAttr<F32Attr, "1.0">:$alpha,
+           DefaultValuedAttr<F32Attr, "1.0">:$beta,
+           DefaultValuedAttr<I32Attr, "0">:$transA,
+           DefaultValuedAttr<I32Attr, "0">:$transB);
   let results = (outs AnyTypeOf<[AnyMemRef, AnyTensor]>);
 }
 
