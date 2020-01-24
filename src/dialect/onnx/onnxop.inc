@@ -3413,9 +3413,6 @@ def ONNXTransposeOp:ONNX_Op<"Transpose",
   let arguments = (ins AnyTypeOf<[AnyMemRef, AnyTensor]>:$data,
            OptionalAttr<I64ArrayAttr>:$perm);
   let results = (outs AnyTypeOf<[AnyMemRef, AnyTensor]>:$o_transposed);
-  let extraClassDeclaration = [{ 
-    static StringRef getPermAttrName() { return "perm"; }
-    }];
 }
 
 def ONNXUniqueOp:ONNX_Op<"Unique", 

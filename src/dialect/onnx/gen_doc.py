@@ -271,7 +271,7 @@ def gen_schema(schema) :
                         'Softplus', 'Softsign']
     CanonicalList=['Add', 'Identity']
     manual_code = dict([
-      ('Transpose', '  let extraClassDeclaration = [{ \n'+
+      ('DummyExample', '  let extraClassDeclaration = [{ \n'+
                     '    static StringRef getPermAttrName() { return "perm"; }\n'+
                     '    }];\n')
       ])
