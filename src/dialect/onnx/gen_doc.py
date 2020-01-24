@@ -356,6 +356,7 @@ def gen_schema(schema) :
                 s+= 'AnyTypeOf<[AnyMemRef, AnyTensor]>'
             else:
                 s+= 'TensorOf<['+etypes+']>'
+            s += ':$o_'+output.name
     s+= ');\n'
 
     #s+= 'let hasCanonicalizer = 1;'
