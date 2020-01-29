@@ -45,7 +45,7 @@ ShapeInferenceList=['Exp', 'Tanh', 'Sinh', 'Cosh', 'Sigmoid', 'Relu',
                    'Sum', 'Max', 'Min', 'MatMul', 'Gemm', 'LeakyRelu',
                    'Elu', 'Selu', 'HardSigmoid', 'Reshape', 'Reciprocal',
                    'Identity', 'Cos', 'Log', 'Transpose', 'Softmax',
-                   'Softplus', 'Softsign', 'Sqrt']
+                   'Softplus', 'Softsign', 'Sqrt', 'Unsqueeze']
 
 CanonicalList=['Add', 'Identity']
 
@@ -301,7 +301,6 @@ def  collect_types(schema, input) :
     return allowedTypeStr
 
 def gen_schema(schema) :
-
     skip_attr_gen = []
     line_indent = '  '
 
