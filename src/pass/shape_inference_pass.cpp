@@ -103,6 +103,7 @@ public:
         op->getName().getStringRef() != "onnx.Reciprocal" &&
         op->getName().getStringRef() != "onnx.Softplus" &&
         op->getName().getStringRef() != "onnx.Softsign" &&
+        op->getName().getStringRef() != "onnx.Sign" &&
         op->getName().getStringRef() != "onnx.Mul" &&
         op->getName().getStringRef() != "onnx.Add" &&
         op->getName().getStringRef() != "onnx.Div" &&
@@ -112,6 +113,7 @@ public:
         op->getName().getStringRef() != "onnx.Xor" &&
         op->getName().getStringRef() != "onnx.Sum" &&
         op->getName().getStringRef() != "onnx.Max" &&
+        op->getName().getStringRef() != "onnx.MaxPoolSingleOut" &&
         op->getName().getStringRef() != "onnx.Min" &&
         op->getName().getStringRef() != "onnx.Identity" &&
         op->getName().getStringRef() != "onnx.MatMul" &&
